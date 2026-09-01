@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WJ8FJ7oEv18=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sathi\\OneDrive\\Desktop\\Sri-Kumaran-Hospital-Manapparai\\backend\\SriKumaranHospital.API\\SriKumaranHospital.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sathi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\sathi\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}

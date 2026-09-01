@@ -1,0 +1,6 @@
+@SriKumaranHospital.API_HostAddress = http://localhost:5044
+
+GET {{SriKumaranHospital.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
