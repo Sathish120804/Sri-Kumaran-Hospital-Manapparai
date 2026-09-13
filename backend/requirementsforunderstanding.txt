@@ -1,0 +1,34 @@
+models:
+Department
+Doctor
+├── Id
+├── Name
+├── Qualification
+├── Specialization
+├── Experience
+├── Department
+└── Profile Image
+
+One-to-Many relationship
+
+One Department
+      ↓
+Many Doctors
+
+Example:
+
+Cardiology
+   ├── Dr. Kumar
+   ├── Dr. Arun
+   └── Dr. Raj
+
+Pediatrics
+   ├── Dr. Priya
+   └── Dr. Meena
+
+   Service Model
+   Laboratory
+Pharmacy
+Health Checkup
+Emergency Care
+Diagnostic Services
