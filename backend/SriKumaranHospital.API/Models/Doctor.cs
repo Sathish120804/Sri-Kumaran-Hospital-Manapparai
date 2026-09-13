@@ -13,4 +13,6 @@ public class Doctor
     public int Experience { get; set; }
 
     public int DepartmentId { get; set; }
+
+    public Department Department { get; set; } = null!;
 }

@@ -11,4 +11,6 @@ public class Department
     public string DescriptionEnglish { get; set; } = string.Empty;
 
     public string DescriptionTamil { get; set; } = string.Empty;
+
+    public ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
 }

@@ -12,6 +12,10 @@ builder.Services.AddDbContext<HospitalDbcontext>
 (options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 //configuring the department service
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+//configuring the doctor service
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+//adding the service for Service that have in Hospital
+builder.Services.AddScoped<IServiceService, ServiceService>();
 //service for swagger end point api testing
 builder.Services.AddSwaggerGen();
 //adding the controller

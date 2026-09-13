@@ -1,4 +1,4 @@
-namespace SriKumaranHospital.API.DTOs;
+namespace SriKumaranHospital.API.Models;
 
 public class DoctorDto
 {
@@ -12,7 +12,10 @@ public class DoctorDto
 
     public int Experience { get; set; }
 
-    public string DepartmentName { get; set; } = string.Empty;
+    public int DepartmentId { get; set; }
+
+    public Department Department { get; set; } = null!;
+     public string DepartmentName { get; set; } = string.Empty;
 }
 
 // Model:
