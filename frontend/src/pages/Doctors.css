@@ -1,0 +1,339 @@
+/* =========================================================
+   DOCTORS PAGE
+========================================================= */
+
+.doctors-page {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.doctors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.doctors-header h1 {
+  margin: 12px 0 0;
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.doctors-header h1 span {
+  color: var(--primary);
+}
+
+.doctors-intro {
+  max-width: 480px;
+}
+
+.doctors-intro p {
+  margin: 0;
+  color: #647681;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.intro-line {
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: var(--primary);
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   DOCTOR GRID
+========================================================= */
+
+.doctor-grid {
+  row-gap: 32px;
+}
+
+.doctor-card {
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e5edf0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(20, 119, 155, 0.12);
+}
+
+
+/* =========================================================
+   DOCTOR IMAGE
+========================================================= */
+
+.doctor-image-wrapper {
+  height: 330px;
+  background: var(--primary-light);
+  overflow: hidden;
+  position: relative;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.doctor-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(
+      145deg,
+      #e9f5f8 0%,
+      #f7fbfc 100%
+    );
+}
+
+.doctor-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.doctor-placeholder-icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: var(--primary);
+  font-size: 38px;
+  box-shadow: 0 10px 25px rgba(20, 119, 155, 0.12);
+  margin-bottom: 16px;
+}
+
+.doctor-placeholder-initials {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.doctor-placeholder-label {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+
+/* =========================================================
+   DOCTOR CONTENT
+========================================================= */
+
+.doctor-content {
+  padding: 28px;
+}
+
+.doctor-specialization {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.doctor-content h2 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.doctor-qualification {
+  margin: 10px 0 0;
+  color: #6c7d85;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.doctor-divider {
+  width: 100%;
+  height: 1px;
+  background: #e7eef0;
+  margin: 20px 0;
+}
+
+.doctor-meta {
+  color: #60737c;
+  font-size: 14px;
+}
+
+.doctor-meta i {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+
+/* =========================================================
+   PROFILE LINK
+========================================================= */
+
+.doctor-view-link {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.doctor-view-link:hover {
+  color: var(--primary-dark);
+}
+
+.doctor-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  transition: all 0.3s ease;
+}
+
+.doctor-view-link:hover .doctor-arrow {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.doctor-status {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.doctor-loader {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #dcecef;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: doctorSpin 0.8s linear infinite;
+  margin-bottom: 18px;
+}
+
+@keyframes doctorSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.doctor-status p {
+  color: #6c7d85;
+}
+
+.doctor-error i {
+  font-size: 42px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.doctor-retry {
+  border: none;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 11px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-retry:hover {
+  background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .doctors-page {
+    padding: 65px 0;
+  }
+
+  .doctors-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .doctors-header h1 {
+    font-size: 42px;
+  }
+
+  .doctors-intro {
+    max-width: 600px;
+  }
+
+  .doctor-image-wrapper {
+    height: 300px;
+  }
+}
+
+
+@media (max-width: 575px) {
+
+  .doctors-page {
+    padding: 50px 0;
+  }
+
+  .doctors-header h1 {
+    font-size: 36px;
+  }
+
+  .doctor-image-wrapper {
+    height: 280px;
+  }
+
+  .doctor-content {
+    padding: 23px;
+  }
+
+  .doctor-content h2 {
+    font-size: 21px;
+  }
+}
