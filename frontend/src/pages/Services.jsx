@@ -1,6 +1,20 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col, Spinner, Alert } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Spinner,
+  Alert,
+} from "react-bootstrap";
+
 import api from "../services/api";
+
+import "./Services.css";
+
+
+/* =========================================================
+   SERVICE IMAGES
+========================================================= */
 
 const serviceImages = {
   "Spiral CT Scan":
@@ -31,7 +45,7 @@ const serviceImages = {
     "https://d28c6jni2fmamz.cloudfront.net/055_CT_FEB_002_Images_for_Government_Scheme_Pages_5_f318ccd081_751290530b.webp",
 
   "Fracture Surgery":
-    "https://dongnaicdc.vn/UserFiles/Images/2025/3/%C3%8A%20k%C3%ADp%20ph%E1%BA%ABu%20thu%E1%BA%81t%20ch%C3%A2n%20cho%20b%E1%BB%87nh%20nh%C3%A2n.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Growing_to_meet_your_needs%2C_Langley_Orthopedics_is_bad_to_the_bone_130205-F-JC454-199.jpg/250px-Growing_to_meet_your_needs%2C_Langley_Orthopedics_is_bad_to_the_bone_130205-F-JC454-199.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
 
   "Jaw Fracture Surgery":
     "https://imslegal.co.uk/asset/66abac4feb4ed/1_Mandibular-Fracture.jpg",
@@ -52,28 +66,52 @@ const serviceImages = {
     "https://api.hub.jhu.edu/factory/sites/default/files/styles/soft_crop_1300/public/2025-07/robot-surgery-procedure_2.jpg",
 };
 
+
+/* =========================================================
+   SERVICES PAGE
+========================================================= */
+
 function Services() {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+
+  /* =======================================================
+     FETCH SERVICES
+  ======================================================= */
+
   useEffect(() => {
     const fetchServices = async () => {
       try {
+        setLoading(true);
+        setError("");
+
         const response = await api.get("/Services");
 
-        const uniqueServices = response.data.filter(
-          (service, index, self) =>
-            index ===
-            self.findIndex(
-              (item) => item.nameEnglish === service.nameEnglish
-            )
+        const data = Array.isArray(response.data)
+          ? response.data
+          : [];
+
+        /* Remove duplicate records */
+        const uniqueServices = Array.from(
+          new Map(
+            data.map((service) => [
+              service.nameEnglish,
+              service,
+            ])
+          ).values()
         );
 
         setServices(uniqueServices);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-        setError("Unable to load hospital services.");
+
+      } catch (err) {
+        console.error("Failed to fetch services:", err);
+
+        setError(
+          "Unable to load medical services. Please try again later."
+        );
+
       } finally {
         setLoading(false);
       }
@@ -82,96 +120,185 @@ function Services() {
     fetchServices();
   }, []);
 
+
+  /* =======================================================
+     LOADING
+  ======================================================= */
+
   if (loading) {
     return (
-      <div className="py-5 text-center">
-        <Spinner animation="border" />
+      <main className="services-page">
 
-        <p className="mt-3 mb-0">
-          Loading services...
-        </p>
-      </div>
+        <section className="services-page-hero">
+
+          <Container>
+
+            <div className="services-hero-content">
+
+              <span className="services-eyebrow">
+                SRI KUMARAN HOSPITAL
+              </span>
+
+              <h1>
+                Medical Services
+                <span>& Facilities</span>
+              </h1>
+
+              <p>
+                Comprehensive diagnostic, medical and
+                surgical services for patient care.
+              </p>
+
+            </div>
+
+          </Container>
+
+        </section>
+
+
+        <section className="services-loading-section">
+
+          <Spinner
+            animation="border"
+            role="status"
+            aria-label="Loading services"
+          />
+
+          <p>
+            Loading medical services...
+          </p>
+
+        </section>
+
+      </main>
     );
   }
+
+
+  /* =======================================================
+     ERROR
+  ======================================================= */
 
   if (error) {
     return (
-      <Container className="py-5">
-        <Alert variant="danger">
-          {error}
-        </Alert>
-      </Container>
+      <main className="services-page">
+
+        <section className="services-page-hero">
+
+          <Container>
+
+            <div className="services-hero-content">
+
+              <span className="services-eyebrow">
+                SRI KUMARAN HOSPITAL
+              </span>
+
+              <h1>
+                Medical Services
+                <span>& Facilities</span>
+              </h1>
+
+            </div>
+
+          </Container>
+
+        </section>
+
+
+        <Container className="services-error-container">
+
+          <Alert variant="danger">
+            {error}
+          </Alert>
+
+        </Container>
+
+      </main>
     );
   }
 
+
+  /* =======================================================
+     MAIN PAGE
+  ======================================================= */
+
   return (
-    <main className="bg-white">
+    <main className="services-page">
 
-      {/* =========================
-          PAGE HEADER
-      ========================== */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-      <section className="py-5 border-bottom">
+      <section className="services-page-hero">
+
         <Container>
-          <Row className="align-items-center g-4">
 
-            <Col lg={7}>
+          <div className="services-hero-content">
 
-              <span className="section-label">
-                Sri Kumaran Hospital
-              </span>
+            <span className="services-eyebrow">
+              SRI KUMARAN HOSPITAL
+            </span>
 
-              <h1 className="page-title mt-3 mb-3">
-                Medical Services & Facilities
-              </h1>
+            <h1>
+              Medical Services
+              <span>& Facilities</span>
+            </h1>
 
-              <p className="section-description mb-0">
-                Comprehensive diagnostic, surgical and supportive
-                healthcare services designed to support patients
-                with accessible and quality medical care.
-              </p>
+            <p>
+              Comprehensive diagnostic, medical and surgical
+              services designed to support quality patient care
+              at Sri Kumaran Hospital, Manapparai.
+            </p>
 
-            </Col>
+          </div>
 
-            <Col lg={5}>
-
-              <div className="bg-light rounded-4 p-4">
-
-                <div className="d-flex align-items-center gap-3">
-
-                  <div className="fs-1 text-primary">
-                    <i className="bi bi-hospital"></i>
-                  </div>
-
-                  <div>
-
-                    <h3 className="mb-2">
-                      Advanced Healthcare Services
-                    </h3>
-
-                    <p className="mb-0">
-                      Diagnostics, surgery, laboratory, pharmacy
-                      and healthcare support services.
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </Col>
-
-          </Row>
         </Container>
+
       </section>
 
 
-      {/* =========================
-          SERVICES
-      ========================== */}
+      {/* =====================================================
+          SERVICES INTRO
+      ===================================================== */}
 
-      <section className="py-5">
+      <section className="services-intro-section">
+
+        <Container>
+
+          <div className="services-intro">
+
+            <div>
+
+              <span className="services-section-label">
+                HEALTHCARE SERVICES
+              </span>
+
+              <h2>
+                Quality facilities for
+                <span> better care.</span>
+              </h2>
+
+            </div>
+
+            <p>
+              From advanced diagnostics and laboratory
+              services to surgical procedures, Sri Kumaran
+              Hospital provides a range of healthcare
+              facilities for patients and families.
+            </p>
+
+          </div>
+
+        </Container>
+
+      </section>
+
+
+      {/* =====================================================
+          SERVICE CARDS
+      ===================================================== */}
+
+      <section className="services-list-section">
 
         <Container>
 
@@ -180,71 +307,67 @@ function Services() {
             {services.map((service, index) => {
 
               const image =
-                serviceImages[service.nameEnglish] ||
-                "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85";
+                serviceImages[service.nameEnglish];
 
               return (
                 <Col
+                  xs={12}
                   md={6}
                   lg={4}
-                  key={service.id}
+                  key={`${service.nameEnglish}-${index}`}
                 >
 
-                  <article className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                  <article className="services-card">
 
                     {/* IMAGE */}
 
-                    <div
-                      style={{
-                        height: "220px",
-                        overflow: "hidden",
-                      }}
-                    >
+                    <div className="services-card-image">
 
-                      <img
-                        src={image}
-                        alt={service.nameEnglish}
-                        className="w-100 h-100"
-                        style={{
-                          objectFit: "cover",
-                        }}
-                        loading="lazy"
-                      />
+                      {image ? (
+                        <img
+                          src={image}
+                          alt={service.nameEnglish}
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="services-card-placeholder">
+                          <i className="bi bi-hospital"></i>
+                        </div>
+                      )}
+
+                      <span className="services-card-number">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
 
                     </div>
 
 
                     {/* CONTENT */}
 
-                    <div className="card-body p-4 d-flex flex-column">
+                    <div className="services-card-body">
 
-                      <div className="d-flex justify-content-between align-items-start mb-3">
-
-                        <span className="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
-
-                          Service{" "}
-                          {String(index + 1).padStart(2, "0")}
-
-                        </span>
-
-                        <i className="bi bi-arrow-up-right-circle fs-4 text-primary"></i>
-
-                      </div>
-
-
-                      <h4 className="card-title mb-2">
+                      <h3>
                         {service.nameEnglish}
-                      </h4>
+                      </h3>
 
-
-                      <p className="tamil-text text-primary fw-semibold mb-3">
+                      <p className="services-card-tamil">
                         {service.nameTamil}
                       </p>
 
-
-                      <p className="mb-0">
+                      <p className="services-card-description">
                         {service.descriptionEnglish}
                       </p>
+
+
+                      <div className="services-card-bottom">
+
+                        <span>
+                          Sri Kumaran Hospital
+                        </span>
+
+                        <i className="bi bi-arrow-up-right"></i>
+
+                      </div>
 
                     </div>
 
@@ -252,7 +375,6 @@ function Services() {
 
                 </Col>
               );
-
             })}
 
           </Row>
@@ -262,49 +384,56 @@ function Services() {
       </section>
 
 
-      {/* =========================
-          CONTACT CTA
-      ========================== */}
+      {/* =====================================================
+          MEDICAL ASSISTANCE CTA
+          THIS IS LIGHT BLUE
+      ===================================================== */}
 
-      <section className="py-5 bg-light">
+      <section className="services-assistance-section">
 
         <Container>
 
-          <div className="text-center">
+          <div className="services-assistance-box">
 
-            <span className="section-label">
-              Get in touch
-            </span>
+            <div className="services-assistance-content">
 
-            <h2 className="section-title mt-3 mb-3">
-              Need Medical Assistance?
-            </h2>
+              <span className="services-section-label">
+                GET IN TOUCH
+              </span>
 
-            <p className="section-description mx-auto mb-4">
-              Contact Sri Kumaran Hospital for appointments and
-              service enquiries.
-            </p>
+              <h2>
+                Need Medical Assistance?
+              </h2>
+
+              <p>
+                Contact Sri Kumaran Hospital for appointments,
+                service enquiries and further information.
+              </p>
+
+            </div>
 
 
-            <div className="d-flex justify-content-center gap-3 flex-wrap">
+            <div className="services-assistance-actions">
 
               <a
                 href="tel:04332261444"
-                className="btn btn-primary px-4 py-2 rounded-pill"
+                className="services-call-button"
+                aria-label="Call Sri Kumaran Hospital"
               >
-                <i className="bi bi-telephone-fill me-2"></i>
-                Call Hospital
+                <i className="bi bi-telephone"></i>
+                <span>Call Hospital</span>
               </a>
 
 
               <a
-                href="https://wa.me/919843300999"
+                href="https://wa.me/914332261444"
                 target="_blank"
-                rel="noreferrer"
-                className="btn btn-success px-4 py-2 rounded-pill"
+                rel="noopener noreferrer"
+                className="services-whatsapp-button"
+                aria-label="Contact Sri Kumaran Hospital on WhatsApp"
               >
-                <i className="bi bi-whatsapp me-2"></i>
-                WhatsApp
+                <i className="bi bi-whatsapp"></i>
+                <span>WhatsApp</span>
               </a>
 
             </div>

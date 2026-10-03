@@ -3646,3 +3646,47 @@ h6 {
   line-height: 1.4;
 }
 
+/* =========================================================
+   SERVICES PAGE — FINAL CONTACT CTA
+   Light-blue section before footer
+========================================================= */
+
+.services-contact-section {
+  padding: 75px 0;
+  background: #eaf5f8;
+  color: #263942;
+  border-top: 1px solid #dcecef;
+  border-bottom: 1px solid #dcecef;
+}
+
+.services-contact-section .section-label {
+  color: #14779b;
+}
+
+.services-contact-section h2 {
+  color: #263942;
+}
+
+.services-contact-section p {
+  color: #667981;
+}
+
+.services-contact-section .contact-main-btn {
+  background: #14779b;
+  color: #ffffff;
+}
+
+.services-contact-section .contact-main-btn:hover {
+  background: #0f5d78;
+  color: #ffffff;
+}
+
+.services-contact-section .contact-whatsapp-btn {
+  background: #5aa9b7;
+  color: #ffffff;
+}
+
+.services-contact-section .contact-whatsapp-btn:hover {
+  background: #438e9d;
+  color: #ffffff;
+}

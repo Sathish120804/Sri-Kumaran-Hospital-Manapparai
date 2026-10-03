@@ -1,0 +1,763 @@
+/* =========================================================
+   SRI KUMARAN HOSPITAL
+   SERVICES PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.services-page {
+  width: 100%;
+  background: #ffffff;
+  color: #263942;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.services-page-hero {
+  position: relative;
+
+  padding: 92px 0 88px;
+
+  background: #f5f9fa;
+
+  border-bottom: 1px solid #e3ecef;
+}
+
+.services-hero-content {
+  max-width: 780px;
+}
+
+.services-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #14779b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.services-hero-content h1 {
+  margin: 0;
+
+  color: #263942;
+
+  font-size: clamp(2.7rem, 5vw, 4.2rem);
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+.services-hero-content h1 span {
+  display: block;
+
+  color: #14779b;
+}
+
+.services-hero-content p {
+  max-width: 650px;
+
+  margin: 24px 0 0;
+
+  color: #667981;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.services-intro-section {
+  padding: 85px 0 40px;
+
+  background: #ffffff;
+}
+
+.services-intro {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+
+  align-items: end;
+
+  gap: 60px;
+}
+
+.services-section-label {
+  display: inline-block;
+
+  color: #14779b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.services-intro h2 {
+  margin: 14px 0 0;
+
+  color: #263942;
+
+  font-size: clamp(2rem, 4vw, 3.1rem);
+
+  line-height: 1.12;
+
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
+}
+
+.services-intro h2 span {
+  color: #14779b;
+}
+
+.services-intro > p {
+  margin: 0;
+
+  color: #6c7c83;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICE LIST
+========================================================= */
+
+.services-list-section {
+  padding: 45px 0 100px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.services-card {
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe9ec;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 5px 18px rgba(31, 63, 74, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c7dce2;
+
+  box-shadow:
+    0 16px 35px rgba(31, 63, 74, 0.10);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.services-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #edf4f6;
+}
+
+.services-card-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.services-card:hover .services-card-image img {
+  transform: scale(1.04);
+}
+
+
+/* Image placeholder */
+
+.services-card-placeholder {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #eaf5f8;
+
+  color: #14779b;
+
+  font-size: 38px;
+}
+
+
+/* Number */
+
+.services-card-number {
+  position: absolute;
+
+  top: 16px;
+
+  left: 16px;
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 50%;
+
+  color: #14779b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.services-card-body {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px 24px 22px;
+}
+
+.services-card-body h3 {
+  margin: 0;
+
+  color: #263942;
+
+  font-size: 1.12rem;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+.services-card-tamil {
+  margin: 7px 0 13px;
+
+  color: #14779b;
+
+  font-family:
+    "Noto Sans Tamil",
+    "Inter",
+    sans-serif;
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+
+  font-weight: 600;
+}
+
+.services-card-description {
+  margin: 0;
+
+  color: #697a81;
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.services-card-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #edf1f2;
+}
+
+.services-card-bottom span {
+  color: #8a999f;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+}
+
+.services-card-bottom i {
+  width: 31px;
+
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d8e4e8;
+
+  border-radius: 50%;
+
+  color: #14779b;
+
+  font-size: 11px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.services-card:hover .services-card-bottom i {
+  background: #14779b;
+
+  border-color: #14779b;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MEDICAL ASSISTANCE
+   LIGHT BLUE SECTION
+========================================================= */
+
+.services-assistance-section {
+  padding: 75px 0;
+
+  background: #eaf5f8;
+
+  border-top: 1px solid #d7e9ee;
+
+  border-bottom: 1px solid #d7e9ee;
+}
+
+.services-assistance-box {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 45px;
+
+  padding: 45px 50px;
+
+  background: #eaf5f8;
+
+  border: 1px solid #d2e7ed;
+
+  border-radius: 20px;
+}
+
+.services-assistance-content {
+  max-width: 650px;
+}
+
+.services-assistance-content h2 {
+  margin: 12px 0 10px;
+
+  color: #263942;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
+}
+
+.services-assistance-content p {
+  margin: 0;
+
+  color: #62767e;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.services-assistance-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.services-call-button,
+.services-whatsapp-button {
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 22px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.services-call-button {
+  background: #14779b;
+
+  color: #ffffff;
+}
+
+.services-call-button:hover {
+  background: #0f5d78;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(20, 119, 155, 0.2);
+}
+
+.services-whatsapp-button {
+  background: #5aa9b7;
+
+  color: #ffffff;
+}
+
+.services-whatsapp-button:hover {
+  background: #438e9d;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(90, 169, 183, 0.2);
+}
+
+.services-call-button i,
+.services-whatsapp-button i {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.services-loading-section {
+  min-height: 420px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  background: #ffffff;
+
+  color: #6c7c83;
+}
+
+.services-loading-section .spinner-border {
+  color: #14779b;
+}
+
+.services-loading-section p {
+  margin: 0;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.services-error-container {
+  padding-top: 70px;
+
+  padding-bottom: 70px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .services-page-hero {
+    padding: 75px 0;
+  }
+
+  .services-intro {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .services-intro > p {
+    max-width: 650px;
+  }
+
+  .services-assistance-box {
+    padding: 38px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .services-assistance-actions {
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .services-page-hero {
+    padding: 60px 0;
+  }
+
+  .services-hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .services-hero-content p {
+    font-size: 0.92rem;
+  }
+
+  .services-intro-section {
+    padding-top: 65px;
+  }
+
+  .services-intro h2 {
+    font-size: 2.25rem;
+  }
+
+  .services-list-section {
+    padding-top: 30px;
+
+    padding-bottom: 75px;
+  }
+
+  .services-card-image {
+    height: 215px;
+  }
+
+  .services-assistance-section {
+    padding: 55px 0;
+  }
+
+  .services-assistance-box {
+    padding: 32px 25px;
+
+    border-radius: 16px;
+  }
+
+  .services-assistance-content h2 {
+    font-size: 2.15rem;
+  }
+
+  .services-assistance-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .services-call-button,
+  .services-whatsapp-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .services-page-hero {
+    padding: 50px 0;
+  }
+
+  .services-eyebrow {
+    font-size: 10px;
+  }
+
+  .services-hero-content h1 {
+    font-size: 2.35rem;
+  }
+
+  .services-hero-content p {
+    margin-top: 18px;
+
+    font-size: 0.88rem;
+  }
+
+  .services-intro-section {
+    padding: 55px 0 30px;
+  }
+
+  .services-intro h2 {
+    font-size: 2rem;
+  }
+
+  .services-section-label {
+    font-size: 10px;
+  }
+
+  .services-card-image {
+    height: 205px;
+  }
+
+  .services-card-body {
+    padding: 22px 20px 20px;
+  }
+
+  .services-card-body h3 {
+    font-size: 1rem;
+  }
+
+  .services-card-description {
+    font-size: 0.85rem;
+  }
+
+  .services-assistance-section {
+    padding: 45px 0;
+  }
+
+  .services-assistance-box {
+    padding: 28px 20px;
+  }
+
+  .services-assistance-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .services-assistance-content p {
+    font-size: 0.88rem;
+  }
+}
