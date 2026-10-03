@@ -3,30 +3,38 @@
    Global Stylesheet
 ========================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+
 :root {
   --primary: #14779b;
   --primary-dark: #0f5d78;
   --primary-light: #e9f5f8;
-
   --text-dark: #263942;
   --text: #52656e;
   --text-light: #718087;
-
   --border: #e1eaed;
   --border-dark: #d3e0e5;
-
   --surface: #f5f9fa;
   --surface-soft: #f8fbfc;
-
   --dark-bg: #173e4f;
   --dark-bg-soft: #173b4a;
-
   --emergency-bg: #f8f3ed;
   --emergency-border: #eaded2;
   --emergency-text: #955234;
-
   --white: #ffffff;
+
+  /* Common typography */
+  --font-primary: 'Inter', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-page-title: clamp(2.5rem, 5vw, 4rem);
+  --font-section-title: clamp(2rem, 3.5vw, 2.75rem);
+  --font-card-title: 1.25rem;
+  --font-body: 1rem;
+  --font-small: 0.875rem;
+  --font-label: 0.75rem;
+  --line-heading: 1.15;
+  --line-body: 1.7;
 }
+
 
 
 /* =========================================================
@@ -44,13 +52,7 @@ html {
 body {
   margin: 0;
 
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Arial,
-    sans-serif;
+  font-family: var(--font-primary);
 
   color: var(--text-dark);
 
@@ -3538,3 +3540,109 @@ select {
 
   font-size: 14px;
 }
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY SYSTEM — FINAL OVERRIDES
+   One font family across the complete website.
+   Existing page-specific sizes are preserved so Hero / Page
+   Title / Section / Card hierarchy remains intentional.
+========================================================= */
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+a,
+.nav-link,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+span,
+strong,
+label,
+li {
+  font-family: var(--font-primary);
+}
+
+body {
+  font-size: var(--font-body);
+  line-height: var(--line-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--line-heading);
+}
+
+.page-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-page-title);
+  line-height: var(--line-heading);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.025em;
+}
+
+.section-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-section-title);
+  line-height: var(--line-heading);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.card-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-card-title);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.section-description {
+  font-family: var(--font-primary);
+  max-width: 700px;
+  font-size: var(--font-body);
+  line-height: 1.75;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: var(--font-label);
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.tamil-text {
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+.btn,
+.badge {
+  font-family: var(--font-primary);
+}
+
+.btn {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
