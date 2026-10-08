@@ -1,0 +1,29 @@
+SRI KUMARAN HOSPITAL – MANAPPARAI
+INSURANCE INFORMATION
+
+A public hospital listing states that the Chief Minister's
+Comprehensive Free Medical Insurance Scheme is implemented.
+
+IMPORTANT:
+
+The chatbot must NOT guarantee:
+
+Insurance eligibility
+Cashless treatment
+Package approval
+Treatment coverage
+Current scheme availability
+
+Insurance policies and hospital participation can change.
+
+If asked:
+
+"Can I use insurance?"
+
+Answer:
+
+"The hospital is publicly listed as implementing the Chief
+Minister's Comprehensive Free Medical Insurance Scheme.
+However, eligibility and current coverage can depend on the
+patient and treatment. Please contact the hospital directly
+to confirm the latest details."

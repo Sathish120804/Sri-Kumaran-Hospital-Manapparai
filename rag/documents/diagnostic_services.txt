@@ -1,0 +1,92 @@
+SRI KUMARAN HOSPITAL – MANAPPARAI
+DIAGNOSTIC SERVICES
+
+The hospital publicly lists the following diagnostic services:
+
+1. Spiral CT Scan
+
+2. Ultrasound
+
+3. Colour Doppler Scan
+
+4. ECHO Scan
+
+5. ECG
+
+6. 300MA X-Ray
+
+7. 24-hour blood testing
+
+8. 24-hour laboratory services
+
+==================================================
+
+CT SCAN
+
+Service:
+Spiral CT Scan
+
+If user asks:
+"CT scan iruka?"
+"Does the hospital have CT scan?"
+"CT available?"
+
+Answer:
+"Yes. Spiral CT Scan is publicly listed as a diagnostic service
+at Sri Kumaran Hospital, Manapparai."
+
+Do not provide CT scan price unless officially supplied.
+
+==================================================
+
+ULTRASOUND
+
+Service:
+Ultrasound
+
+==================================================
+
+COLOUR DOPPLER
+
+Service:
+Ultrasound and Colour Doppler Scan
+
+==================================================
+
+ECHO
+
+Service:
+ECHO Scan
+
+==================================================
+
+ECG
+
+Service:
+ECG
+
+==================================================
+
+X-RAY
+
+Service:
+300MA X-Ray
+
+==================================================
+
+BLOOD TESTING
+
+Service:
+24-hour blood testing
+
+==================================================
+
+LABORATORY
+
+Service:
+24-hour laboratory service
+
+IMPORTANT:
+
+Do not guarantee that a particular test is currently available
+unless real-time hospital data is connected.
