@@ -1,0 +1,126 @@
+SRI KUMARAN HOSPITAL — MASTER KNOWLEDGE BASE
+
+SECTION 1: HOSPITAL PROFILE
+
+Hospital name: Sri Kumaran Hospital
+Location: Manapparai, Tamil Nadu, India
+Address: 50/9, Viralimalai Road, Manapparai, Tamil Nadu 621306
+Publicly listed telephone numbers: 04332-261444, 04332-262445
+Publicly listed mobile number: 7397391444
+Publicly listed emergency contacts: 9443900108, 8270942108
+
+Confirm contact details with the hospital before using them for official publication. Published addresses and listings may vary.
+
+SECTION 2: DOCTORS
+
+1. Dr. P. L. Vijayakumar
+Qualifications: MBBS, MS, MCh (Orthopaedics)
+Specialty: Orthopaedics
+Relevant topics: bones, joints, spine, fractures, joint replacement and knee surgery.
+
+2. Dr. C. Renukadevi
+Qualifications: MBBS, MD (Paediatrics)
+Specialty: Paediatrics
+Relevant topics: children and paediatric care.
+
+3. Dr. C. Palaniappan
+Qualifications: MBBS, MD, C.Dials
+Listed area: General Medicine and cardiac-related services.
+Do not identify this doctor as a cardiologist unless officially confirmed.
+
+4. Dr. M. Jeyapriya
+Qualifications: MBBS, DGO
+Listed area: Gynaecology and obstetrics.
+
+Doctor schedules and current availability are not confirmed by this document.
+
+SECTION 3: DEPARTMENTS
+
+Public listings mention:
+- Orthopaedics
+- General Medicine
+- General Surgery
+- Gynaecology
+- Paediatrics
+- Neurology
+- Nephrology
+- ENT
+- Plastic and Facio-Maxillary services
+- Genitourinary Surgery
+
+A department listing does not establish that a named specialist is currently available.
+
+SECTION 4: DIAGNOSTIC SERVICES
+
+Publicly listed services:
+- Spiral CT Scan
+- Ultrasound
+- Colour Doppler
+- ECHO
+- ECG
+- 300 mA X-Ray
+- 24-hour blood testing / laboratory services
+
+Confirm service availability before promising a particular test or appointment.
+
+SECTION 5: SURGICAL SERVICES
+
+Public listings mention:
+- Fracture surgery
+- Jaw fracture surgery
+- Spinal surgery
+- Minimally invasive cervical procedures
+- Joint replacement
+- Minimally invasive knee surgery
+
+The exact procedure, suitability and availability must be confirmed by the hospital's clinical team.
+
+SECTION 6: FACILITIES
+
+Public listings mention:
+- Laboratory services
+- Pharmacy
+- Blood bank
+- Diagnostic services
+- Emergency care
+
+Do not assume every facility or specialist is available at every moment.
+
+SECTION 7: CONTACT AND EMERGENCY
+
+For general enquiries, use the published hospital telephone numbers.
+For emergencies, use the hospital's verified emergency contact numbers or local emergency services.
+
+Do not diagnose emergencies or recommend delaying urgent medical care.
+
+SECTION 8: INSURANCE
+
+Public listings mention implementation of the Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS). Current eligibility, approved treatments and coverage must be verified with the hospital or scheme authority.
+
+SECTION 9: INFORMATION NOT CONFIRMED
+
+- Name of a Chief Doctor / Medical Director
+- Name of a specific neurologist
+- Current doctor schedules
+- Consultation fees
+- Live appointment availability
+- Exact insurance eligibility for an individual patient
+
+If asked about unconfirmed information, state that it is not confirmed and suggest contacting the hospital.
+
+SECTION 10: CHATBOT BEHAVIOUR
+
+The assistant is the Sri Kumaran Hospital information assistant.
+
+It should:
+- Answer greetings naturally.
+- Answer in English or simple Tamil/Tanglish according to the user's question.
+- Understand common spelling mistakes and hospital-related synonyms.
+- Give concise answers first, then relevant additional details.
+- Use retrieved hospital information for factual answers.
+- Never invent doctors, qualifications, fees, schedules or services.
+- Ask a clarifying question if the user's question is ambiguous.
+- Distinguish confirmed information from unconfirmed information.
+- Avoid medical diagnosis and prescription advice.
+- Provide verified contact details when relevant.
+- Admit when information is unavailable.

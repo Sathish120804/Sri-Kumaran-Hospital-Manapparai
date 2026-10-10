@@ -34,7 +34,7 @@ function HospitalChatbot() {
     Endpoint:
     /api/chat
   */
-  const RAG_API_URL = "http://192.168.1.6:8000/api/chat";
+  const RAG_API_URL = "http://10.222.60.157:8000/api/chat";
 
   const [messages, setMessages] = useState([
     {
